@@ -1,0 +1,81 @@
+html {
+	background-image: url('bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 80px;
+	background-color: #fcfaac;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+
+}
+
+body {
+	text-align: center;
+	font-family: 'Alegreya Sans SC', Sans;
+
+}
+
+header {
+	border-bottom: 2px solid black;
+}
+
+header h1 {
+	font-size: 30px;
+	padding-bottom: 8px;
+}
+
+input[type="radio"]:checked+label {
+	color: #0099cc;
+}
+
+#question {
+	font-size: 20px;
+	margin-top: 8px;
+}
+
+
+ul {
+	list-style: none;
+}
+
+
+#choices label {
+	margin-left: 5px;
+	font-size: 18px;
+	margin-top: 8px;
+}
+
+#choices label:hover {
+	color: #0099cc;
+}
+
+#beginButton, #submitButton, #continueButton, #retryButton {
+	color: #fff;
+	border-radius: 2px;
+	background-color: #0099cc;
+	font-size: 18px;
+	font-family: 'Alegreya Sans SC', Sans;
+}
+
+@@media (max-width: 1281px)
+#resultMessage, #finalMessage {
+	font-size: 18px;
+}
+
+@media (max-width: 1281px)
+#choices {
+	margin-top: 10px;
+}
+
+@media (max-width: 1281px)
+#containter {
+	height: 100%;
+	width: 75%;
+	margin: 0 auto;
+}
+
+@media (max-width: 1281px)
+#submitButton {
+	margin-top: 8px;
+}

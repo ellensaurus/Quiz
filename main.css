@@ -34,7 +34,6 @@ input[type="radio"]:checked+label {
 	margin-top: 8px;
 }
 
-
 ul {
 	list-style: none;
 }
@@ -56,26 +55,4 @@ ul {
 	background-color: #0099cc;
 	font-size: 18px;
 	font-family: 'Alegreya Sans SC', Sans;
-}
-
-@@media (max-width: 1281px)
-#resultMessage, #finalMessage {
-	font-size: 18px;
-}
-
-@media (max-width: 1281px)
-#choices {
-	margin-top: 10px;
-}
-
-@media (max-width: 1281px)
-#containter {
-	height: 100%;
-	width: 75%;
-	margin: 0 auto;
-}
-
-@media (max-width: 1281px)
-#submitButton {
-	margin-top: 8px;
 }

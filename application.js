@@ -14,9 +14,7 @@ $(document).ready(function(){
 	var totalQuestions = questions.length;
 	welcomeScreen();
 
-
-	// images appears when answer page loads
-	var images = ['Q1.jpeg', 'Q2.jpg', 'Q3.jpg', 'Q4.jpg', 'Q5.jpg'];
+		var images = ['Q1.jpeg', 'Q2.jpg', 'Q3.jpg', 'Q4.jpg', 'Q5.jpg'];
 				for (var i = 0; i < images.length; i++) {
 					var img = new Image();
 					img.src = images[i];

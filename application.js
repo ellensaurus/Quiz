@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
 	// array containing questions, answers, facts
 	var questions = [
@@ -23,9 +23,13 @@ $(document).ready(function(){
 
 	// welcomeScreen appears when page loads
 	function welcomeScreen() {
-		$("header").fadeIn(2000);
-		$("#beginButton").fadeIn(5000);
+		$("header").fadeIn(1000);
+		$("#beginButton").fadeIn(1000);
+		$("#submitButton").hide();
+		$("#continueButton").hide();
+		$("#retryButton").hide();
 	}
+
 
 	$("#beginButton").click(function(event){
 		event.preventDefault();
@@ -38,13 +42,13 @@ $(document).ready(function(){
 		$("#beginButton").hide();
 		$("#question").text(currentQuestion.question);
 		for (i = 0; i < currentQuestion.choices.length; i++){
-			$("#choices").append('<input type="radio" name="choice" value=' + currentQuestion.choice[i] + ' class=\'choices\' id=' + currentQuestion.choices[i] + '><label for=' + currentQuestion.choice[i] + '>' + currentQuestion.choice[i] + '</label><br>');		
+			$("#choices").append('<input type="radio" name="choice" value=' + currentQuestion.choices[i] + ' class=\'choices\' id=' + currentQuestion.choices[i] + '><label for=' + currentQuestion.choices[i] + '>' + currentQuestion.choices[i] + '</label><br>');		
 		}
 		$("#question").slideDown("slow");
 		$("#choices").slideDown("slow");
 		$("#submitButton").fadeIn("slow");
 		$("#questionNumber").text("Question " + (questionNumber + 1) + "/" + totalQuestions);
-		$("#questionNumber").fadeIn(4000);
+		$("#questionNumber").fadeIn(1000);
 	}
 
 	$("#submitButton").click(function(event){
@@ -54,9 +58,9 @@ $(document).ready(function(){
 
 	function resultMessage() {
 		var currentQuestion = questions[questionNumber];
-		$("#resultMessage").append('<img src=' + currentQuestion.image + '" alt="' + currentQuestion.answer + '">' + '<br><br>' + "Answer: " + currentQuestion.answer + '<br>' + '<br>' + currentQuestion.facts + '<br>');
-		$("#resultMessage").fadeIn(2000);
-		$("#continueButton").fadeIn(5000);
+		$("#resultMessage").append('<img src="' + currentQuestion.image + '" alt="' + currentQuestion.answer + '">' + '<br><br>' + "Answer: " + currentQuestion.answer + '<br>' + '<br>' + currentQuestion.facts + '<br>');
+		$("#resultMessage").fadeIn(1000);
+		$("#continueButton").fadeIn(1000);
 	}
 
 	// checkAnswer happens when submitButton is clicked
@@ -66,7 +70,7 @@ $(document).ready(function(){
 		$("#questionNumber").hide();
 		$("#question").hide();
 		$("#choices").hide();
-		$("submitButton").hide();
+		$("#submitButton").hide();
 		$("#choices").empty();
 		if (!(userChoice)){
 			alert("Select an answer");
@@ -107,7 +111,7 @@ $(document).ready(function(){
 		$("#questionNumber").empty();
 		$("#finalMessage").append("Your score: " + correctAnswers + "/" + totalQuestions);
 		$("#finalMessage").fadeIn(2000);
-		$("#retryButton").fadeIn(5000);
+		$("#retryButton").fadeIn(2000);
 	}
 
 	$("#retryButton").click(function(event){
